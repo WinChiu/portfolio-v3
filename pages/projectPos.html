@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../window.curDot.min.js"></script>
+  </head>
+  <body>
+    <section id="projectSection">
+      <article class="header">
+        <div
+          class="coverImg"
+          style="
+            background-image: url('../asset/img/projectImg/project_pos-cover.webp');
+          "
+        >
+          <h1>POS TW/HK 金流串接正逆流程設計</h1>
+          <img src="../asset/img/projectImg/projectCover_deco.svg" alt="" />
+        </div>
+        <div class="projectDescription">
+          <div class="projectDescription__block">
+            <h2>專案簡介</h2>
+            <p>
+              為 SHOLINE POS 台灣與香港版金流串接需求，設計金流正逆流成的設計稿
+            </p>
+          </div>
+          <div class="projectDescription__block">
+            <h2>專案成果</h2>
+            <p>
+              為 SHOLINE POS 完成 6 項正逆金流系統操作流程設計，涵蓋 3
+              種金流、非金流付款方式與多種付款結果處理（成功、失敗、離線、操作錯誤…），範圍涉及後台設定、POS
+              結帳/取消/退貨流程與刷卡機結帳功能，並進行上線前的 UI Test
+            </p>
+          </div>
+          <div class="projectDescription__block">
+            <h2>專案時長</h2>
+            <p>
+              Jul. 2022 ~ Nov. 2022（由不連續的多階段需求組成，總時長約 5 個月）
+            </p>
+          </div>
+          <div class="projectDescription__block">
+            <h2>專案角色</h2>
+            <p>UX Designer</p>
+          </div>
+        </div>
+      </article>
+      <div class="contentContainer">
+        <h2 class="title">專案背景</h2>
+        <div class="flexbox flexbox__horizontal">
+          <div class="pContainer pContainer--left">
+            <p>
+              SHOPLINE 收購 WPOS 後開始對商家提供 POS
+              系統的服務，隨著電子支付、信用卡金流付款方式的需求量增加，台灣的信用卡使用率已經超越現金，整體比重達
+              80%。
+            </p>
+            <p>
+              目前台灣店家常以自行和銀行簽約的方式使用金流服務，造成 SHOPLINE
+              無法獲得手續費收入，因此需要系統支援並推廣自家金流串接服務（SHOPLINE
+              Payment）以提高獲利。
+            </p>
+            <p>
+              香港版本在過去已完成 SHOPLINE Payment
+              服務的串接，為了因應香港市場刷卡機手續費不同的現象，系統需支援串接不同品牌的刷卡機服務以滿足店家對工作流程與成本方面的考量與需求；同時針對現有的正逆流程做整體優化。
+            </p>
+          </div>
+          <img
+            src="../asset/img/projectImg/project_pos-1.webp"
+            alt=""
+            class="flexboxImg flexboxImg__horizontal"
+          />
+        </div>
+      </div>
+      <div class="contentContainer">
+        <h2 class="title">需求理解</h2>
+        <div class="flexbox flexbox__horizontal">
+          <img
+            src="../asset/img/projectImg/project_pos-2.webp"
+            alt=""
+            class="flexboxImg flexboxImg__horizontal"
+          />
+          <div class="pContainer pContainer--right">
+            <p>
+              整體金流服務由 admin (店家後台)、金流中心、中台與 POS
+              四個部分所組成。在 POS
+              操作時，所需要的各式指令、判斷與資料，都會透過中台與金流中心進行連接。因此，在進行相關設計時，需優先釐清目前中台所提供的接口是否支援錯誤判斷、相關資訊提供…等功能。為了因應不同的狀況，在進行介面設計時需要協助使用者避免錯誤操作並且清楚地顯示系統狀態。
+            </p>
+            <p>本次需求文件中所涵蓋的四項主流程包含以下：</p>
+            <ul>
+              <li>Admin 後台設定：關於金流串接服務的申請與設定流程。</li>
+              <li>
+                POS
+                交易：對已儲存的商品進行結帳的流程，包含各種付款成功與失敗狀態。
+              </li>
+              <li>
+                刷卡機結帳：於 POS
+                上進行刷卡機結帳操作，包含各種結帳成功與失敗狀態。
+              </li>
+              <li>
+                POS
+                退款與取消：對於已結帳的訂單進行退款與取消流程，包含各種成功與失敗狀態。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="contentContainer">
+        <h2 class="title">設計目標與挑戰</h2>
+        <div class="flexbox flexbox__vertical">
+          <div class="pContainer pContainer--top">
+            <h3 class="semiTitle">
+              「讓店家能快速完成金流結帳流程，並有效協助排除錯誤狀態以避免顧客長時間的等待」
+            </h3>
+            <p>
+              作為實體店面結帳流程中的工具，於 POS
+              上進行結帳的流程需快速、便捷且能有效協助店家排除錯誤，避免實體店面顧客長時間的等待，本次需求涉及不同金流服務的串接與結帳方式的搭配，使得流程較為繁瑣需清楚釐清；而在多功能的介面上也須凸顯重要資訊以方便店家進行日常操作。
+            </p>
+            <p>
+              在本次需求中，將串接 Adyen 和 Global Payment 兩家刷卡機公司於 POS
+              系統中，由於兩家刷卡機處理流程不同，導致結帳、取消和退貨流程中各有不同的限制，需要系統對使用者進行回饋。
+            </p>
+            <p>
+              結帳服務中，包含「結清」和「預定」兩種結帳方式，其中「預定」又可分為金流和非金流結帳。搭配不同的刷卡機公司，會出現許多不同的操作路徑和限制，因此需要將其釐清，並搭配足夠的系統回饋和防呆機制，才能讓使用流程順暢。
+            </p>
+          </div>
+          <img
+            src="../asset/img/projectImg/project_pos-3.webp"
+            alt=""
+            class="flexboxImg flexboxImg__vertical flexboxImg__vertical--small"
+          />
+        </div>
+      </div>
+      <div class="contentContainer">
+        <h2 class="title">設計解方</h2>
+        <div class="flexbox flexbox__vertical">
+          <div class="pContainer pContainer--top">
+            <h3 class="semiTitle">1. 刷卡機結帳警示提示（香港用語為清機）</h3>
+            <p>
+              刷卡機結帳是商家需要手動操作的步驟。商家必須透過此步驟，才能將金流單的款項轉入自己的帳戶中。因此在增加刷卡機結帳功能後，我們需要明確提醒商家尚未進行刷卡機結帳。
+            </p>
+            <p>
+              理論上，商家的處理程序會在固定時間週期後，使用 POS
+              中的小結清單清點貨物與會計帳務（稱為關帳），確認無誤後才能進行刷卡機結帳。因此，我們希望可以在小結清單中加入刷卡機尚未結帳的提示。
+            </p>
+          </div>
+          <img
+            src="../asset/img/projectImg/project_pos-4.webp"
+            alt=""
+            class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle flexboxImg__vertical--small"
+          />
+          <div class="pContainer pContainer--top">
+            <p>
+              在檢視小結清單頁面與盤點使用者情境後，最終不採用需求文件上的建議並進行額外的設計發散，原因如下：
+            </p>
+            <ul>
+              <li>
+                店家使用小結清單比例低：在進一步了解店家的使用方式後發現，多數店家並沒有明確的關帳流程，小結清單的使用率也較低，因此將提示設計於該頁面中無法起到效果。
+              </li>
+              <li>
+                小結清單頁面資訊過多：目前頁面中已存在不同金流與非金流的結帳資訊，且店家可能存在使用二台以上刷卡機情況，若加入不同刷卡機的提示會導致頁面警示資訊過多。另外對於開發端來說，要偵測不同刷卡機的狀態也是一項負擔
+              </li>
+            </ul>
+          </div>
+          <div class="pContainer pContainer--top">
+            <p>
+              最終，我在左側全域導覽列和收銀檯漢堡選單上設計了警示紅點，雖然無法明確指出是「刷卡機尚未結帳」，但因存在於店家常用的介面上，且使用簡單的紅點作呈現，可以在不增加資訊負擔的前提下，時時提醒店家有操作尚未完成，以達到警示店家的目的。
+            </p>
+          </div>
+        </div>
+        <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+          <img
+            src="../asset/img/projectImg/project_pos-5.webp"
+            alt=""
+            class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+          />
+          <img
+            src="../asset/img/projectImg/project_pos-6.webp"
+            alt=""
+            class="flexboxImg flexboxImg__horizontal"
+          />
+        </div>
+        <div class="flexbox flexbox__vertical">
+          <div class="pContainer pContainer--top">
+            <h3 class="semiTitle">2. 退款金額輸入</h3>
+            <p>
+              在退款的操作流程中，店家在某些情況可以選擇與結帳時不同的金流方式與金額組合進行退款。但在目前系統中的結帳流程涵蓋多種組合：
+            </p>
+            <ul>
+              <li>結清單/金流</li>
+              <li>結清單/非金流</li>
+              <li>預定單/非金流+非金流</li>
+              <li>預定單/金流+非金流</li>
+              <li>預定單/金流+金流</li>
+            </ul>
+            <p>
+              其中，金流訂單中有兩種刷卡機與香港的行動支付-八達通，它們各自有不同的限制、退款成功、失敗與離線狀態。排列組合後，在取消/退貨流程中將涉及許多不同的情況。因此，需要在系統上顯示足夠的資訊，以降低操作時間並阻止錯誤操作，以維持顧客在退款時的良好體驗。
+            </p>
+          </div>
+          <img
+            src="../asset/img/sampleImg.webp"
+            alt=""
+            class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+          />
+          <div class="pContainer pContainer--top">
+            <h4 class="smallTitle">釐清錯誤狀態</h4>
+            <p>
+              在退款流程中，根據退款方式和金額，會出現不同的錯誤和提示狀態（參見上圖）。在退款操作完成後，由於不同種類的訂單和金流會導致退款處理時間、方式和結果的不同，而需要顯示不同的資訊（參見下圖）。因此，在進行設計之前，首先根據需求文件盤點各狀態下所擁有的錯誤和後續資訊，並自行梳理出流程圖，以避免後續缺失和邏輯上的錯誤。
+            </p>
+          </div>
+          <img
+            src="../asset/img/sampleImg.webp"
+            alt=""
+            class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+          />
+          <div class="pContainer pContainer--top">
+            <h4 class="smallTitle">退款金額輸入防呆設計</h4>
+            <p>
+              本次的需求中希望可以讓店家自由輸入金額，在點擊儲存之後再進行判斷。但在釐清各退款限制之後，其實在部分的情況下，針對特定的金流只能有特定的退款金額。此時，讓店家輸入再判斷並報錯會造成無謂的嘗試，而報錯訊息不清楚的情況下也無法讓店家更正，只能自行計算或再次嘗試其他金額。
+            </p>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/sampleImg.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <img
+              src="../asset/img/sampleImg.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal"
+            />
+          </div>
+          <div class="pContainer pContainer--top">
+            <h4 class="semiTitle">
+              設計聚焦：
+              「在不影響店家操作效率的情況下，提醒並制止店家進行錯誤的退款金額輸入」
+            </h4>
+            <p>
+              因此我設計在「選擇退款方式」以及「退款方式列表」中加入可退款金額的提示文字，同時在報錯時再次顯示可輸入的金額，讓店家在金額錯誤時提供有效的協助讓店家完成退款設定的流程。
+            </p>
+          </div>
+          <img
+            src="../asset/img/sampleImg.webp"
+            alt=""
+            class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+          />
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/sampleImg.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <img
+              src="../asset/img/sampleImg.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal"
+            />
+          </div>
+          <img
+            src="../asset/img/sampleImg.webp"
+            alt=""
+            class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

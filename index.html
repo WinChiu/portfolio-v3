@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script type="text/javascript" src="./backgroundAnimation.js" defer></script>
+  <script type="module" src="./index.js" defer></script>
+  <!-- <script type="text/javascript" src="./heightFixer.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script src="./window.curDot.min.js"></script>
+  <body>
+    <!-- <section class="animationCanvas"></section> -->
+    <div data-scroll-container class="scrollContainer">
+      <img src="./asset/img/intro_bg.webp" alt="intro_img" class="intro_bg" />
+      <section data-scroll-section class="titleSection">
+        <div data-scroll class="animateButtonGroup">
+          <p class="animateButton--active animateButton__animate1">
+            Animation1
+          </p>
+          <p class="animateButton animateButton__animate2">Animation2</p>
+          <p class="animateButton animateButton__animate3">Animation3</p>
+        </div>
+        <div data-scroll class="contentGroup">
+          <svg
+            width="100%"
+            height="421"
+            viewBox="0 0 1312 421"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="titleName"
+          >
+            <g clip-path="url(#clip0_1903_78903)">
+              <path
+                d="M31.4742 107.108V176.23H1V16.1787H31.4742V78.8874V79.8874H32.4742H93.5769H94.5769V78.8874V16.1787H124.837V176.23H94.5769V107.108V106.108H93.5769H32.4742H31.4742V107.108Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-1"
+              ></path>
+              <path
+                d="M163.043 24.9777L163.037 24.9664L163.031 24.9554C161.687 22.5339 161.021 19.9924 161.021 17.3168C161.021 13.6968 161.855 10.7118 163.468 8.30686C165.082 5.90204 167.524 4.00167 170.868 2.63608L170.868 2.63613L170.878 2.63183C173.453 1.54683 176.24 1 179.249 1C183.255 1 186.589 1.76015 189.293 3.23025C191.984 4.69268 194.105 6.88668 195.658 9.85115C196.725 12.1271 197.263 14.611 197.263 17.3168C197.263 20.7224 196.482 23.5927 194.964 25.9716C193.444 28.3517 191.145 30.3046 188.004 31.8075L187.996 31.8113L187.989 31.8152C185.283 33.169 182.374 33.8474 179.249 33.8474C175.317 33.8474 172.038 33.0883 169.369 31.6196C166.708 30.1551 164.599 27.9548 163.043 24.9777ZM164.012 176.23V55.7296H193.845V176.23H164.012Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-2"
+              ></path>
+              <path
+                d="M236.317 169.485L236.313 169.477L236.309 169.469C234.543 166.345 233.661 162.952 233.661 159.272C233.661 151.466 236.709 145.747 242.794 141.955C245.767 140.199 249.006 139.321 252.53 139.321C259.871 139.321 265.309 142.416 268.972 148.661C270.876 151.926 271.826 155.457 271.826 159.272C271.826 166.778 268.788 172.44 262.681 176.383C259.565 178.278 256.188 179.223 252.53 179.223C248.836 179.223 245.673 178.403 243.003 176.8C240.332 175.197 238.098 172.775 236.317 169.485ZM262.266 121.073H243.007L238.573 41.2158L237.542 11.9033H267.731L266.699 41.2159L262.266 121.073Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-3"
+              ></path>
+              <path
+                d="M1 417.007V256.956H31.4742V417.007H1Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-4"
+              ></path>
+              <path
+                d="M91.5807 263.754L91.581 263.752C91.7263 262.297 91.7996 260.91 91.7996 259.59V258.37L90.6028 258.61C89.9746 258.736 89.1897 258.804 88.2358 258.804C84.8089 258.804 81.9214 258.119 79.5349 256.793C77.1532 255.469 75.216 253.476 73.7297 250.772L73.7277 250.768C72.3832 248.346 71.7168 245.804 71.7168 243.129C71.7168 238.983 72.5453 235.61 74.1382 232.954C75.725 230.307 78.1119 228.302 81.3566 226.949L81.3648 226.946L81.373 226.942C83.5215 226.001 85.8059 225.529 88.2358 225.529C94.5522 225.529 99.2833 227.561 102.582 231.529C105.915 235.537 107.896 241.653 108.389 250.029L108.39 250.055L108.393 250.08C108.531 251.322 108.6 252.638 108.6 254.029C108.53 265.265 105.795 275.013 100.428 283.312C95.206 291.389 87.4557 298.147 77.1243 303.567L70.5673 291.008C83.3072 284.121 90.4228 275.052 91.5807 263.754Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-5"
+              ></path>
+              <path
+                d="M170.574 312.443C181.591 300.853 192.422 294.617 203.061 293.509C204.596 293.369 206.058 293.3 207.446 293.3C215.342 293.37 221.985 295.169 227.421 298.647C232.857 302.124 237.155 307.322 240.294 314.302L240.908 315.669L241.935 314.577C253.132 302.663 263.352 295.93 272.59 294.136L272.603 294.134L272.616 294.131C275.109 293.576 277.601 293.3 280.09 293.3C290.649 293.3 298.848 296.268 304.815 302.101C310.797 307.949 314.653 316.795 316.273 328.778L316.273 328.78C316.837 332.864 317.119 337.165 317.119 341.685V417.007H287.072V345.533C287.072 338.194 286.104 332.312 284.096 327.957C282.07 323.567 278.976 320.716 274.803 319.556L274.79 319.553L274.778 319.55C272.98 319.099 271.045 318.878 268.98 318.878H268.97L268.96 318.878C261.429 319.029 253.284 323.907 244.542 333.085L244.266 333.375V333.775V417.007H214.219V345.533C214.219 338.194 213.251 332.312 211.243 327.957C209.217 323.567 206.123 320.716 201.95 319.556L201.937 319.553L201.925 319.55C200.127 319.099 198.192 318.878 196.127 318.878H196.117L196.107 318.878C188.576 319.029 180.431 323.907 171.688 333.085L171.412 333.375V333.775V417.007H141.579V296.507H165.981L168.003 311.884L168.117 312.754H168.994H169.849H170.278L170.574 312.443Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-6"
+              ></path>
+              <path
+                d="M442.79 387.036C442.94 386.437 446.437 369.154 453.266 335.272L471.879 256.956H497.86L516.474 335.272C518.752 346.529 522.169 363.766 526.725 386.987L526.883 387.794H527.706H528.774H529.644L529.764 386.933L531.633 373.571C532.381 368.227 533.253 361.992 534.25 354.867C535.531 346.039 536.457 339.484 537.028 335.202L549.496 256.956H578.207L548.665 417.007H510.131L492.15 337.627C488.733 320.817 486.388 308.368 485.11 300.268L484.977 299.424H484.122H483.267H482.424L482.281 300.255C480.005 313.497 477.657 325.955 475.239 337.627C475.239 337.63 475.238 337.632 475.238 337.634L457.681 417.007H419.785L388.766 256.956H419.818L432.498 335.202C433.212 340.629 434.424 348.898 436.131 360.004C436.131 360.005 436.131 360.007 436.132 360.009L437.414 368.992C438.496 376.575 439.35 382.556 439.975 386.935L440.098 387.794H440.965H441.82H442.601L442.79 387.036Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-7"
+              ></path>
+              <path
+                d="M601.018 265.755L601.012 265.744L601.006 265.733C599.661 263.311 598.995 260.769 598.995 258.094C598.995 254.474 599.829 251.489 601.443 249.084C603.056 246.679 605.499 244.779 608.842 243.413L608.842 243.413L608.852 243.409C611.427 242.324 614.214 241.777 617.223 241.777C621.229 241.777 624.563 242.538 627.268 244.008C629.958 245.47 632.08 247.664 633.633 250.629C634.699 252.905 635.238 255.388 635.238 258.094C635.238 261.5 634.457 264.37 632.938 266.749C631.418 269.129 629.119 271.082 625.978 272.585L625.97 272.589L625.963 272.593C623.258 273.946 620.348 274.624 617.223 274.624C613.291 274.624 610.012 273.865 607.344 272.397C604.683 270.933 602.574 268.732 601.018 265.755ZM601.986 417.007V296.507H631.819V417.007H601.986Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-8"
+              ></path>
+              <path
+                d="M773.467 341.689L773.467 417.007H743.206V345.533C743.206 338.411 742.31 332.664 740.454 328.355C738.585 324.018 735.727 321.108 731.846 319.787L731.823 319.779L731.799 319.772C729.702 319.173 727.4 318.878 724.901 318.878C717.733 318.878 710.526 322.243 703.295 328.756C701.867 330.041 700.299 331.468 698.587 333.038L698.263 333.335V333.775V417.007H668.43V296.507H692.833L694.854 311.673L694.969 312.541H695.845H696.7H697.102L697.392 312.263C710.522 299.689 723.533 293.442 736.438 293.3C748.803 293.442 757.951 297.536 764.06 305.47C770.207 313.453 773.396 325.472 773.467 341.687C773.467 341.688 773.467 341.689 773.467 341.689Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-9"
+              ></path>
+              <path
+                d="M972.878 273.552L972.878 273.552C972.948 273.622 973.017 273.691 973.087 273.761L957.264 292.762C948.084 284.137 938.207 279.755 927.651 279.755C912.761 279.755 901.195 286.362 893.046 299.468C886.8 309.496 883.708 321.877 883.708 336.554C883.708 359.807 890.094 376.497 903.121 386.31L903.125 386.313C910.002 391.438 917.977 393.994 927.01 393.994L927.022 393.994C939.4 393.851 950.499 388.703 960.294 378.665L976.113 397.265C962.86 412.431 946.088 420 925.728 420C903.912 420 886.245 412.479 872.634 397.458C859.302 382.431 852.593 362.519 852.593 337.623C852.593 310.194 860.991 288.673 877.7 272.934C891.324 260.287 907.741 253.963 927.01 253.963C944.534 253.963 959.808 260.473 972.878 273.552Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-10"
+              ></path>
+              <path
+                d="M1031.93 311.008C1045.07 299.417 1057.66 293.583 1069.74 293.3C1082.1 293.443 1091.24 297.538 1097.35 305.47C1103.49 313.453 1106.68 325.471 1106.75 341.687C1106.75 341.688 1106.75 341.688 1106.75 341.689L1106.75 417.007H1076.49V345.533C1076.49 338.411 1075.59 332.664 1073.74 328.355C1071.87 324.018 1069.01 321.108 1065.13 319.787L1065.11 319.779L1065.09 319.772C1062.99 319.173 1060.69 318.878 1058.19 318.878C1051.02 318.878 1043.81 322.243 1036.58 328.756L1036.58 328.757C1035.16 330.041 1033.59 331.468 1031.87 333.038L1031.55 333.335V333.775V417.007H1001.72V244.342H1031.55V287.355L1030.27 310.202L1030.14 312.59L1031.93 311.008Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-11"
+              ></path>
+              <path
+                d="M1140.69 265.755L1140.68 265.744L1140.68 265.734C1139.33 263.31 1138.66 260.768 1138.66 258.094C1138.66 254.474 1139.49 251.489 1141.11 249.084C1142.72 246.679 1145.16 244.779 1148.51 243.413L1148.51 243.413L1148.52 243.409C1151.1 242.324 1153.88 241.777 1156.89 241.777C1160.9 241.777 1164.23 242.538 1166.93 244.008C1169.63 245.47 1171.75 247.665 1173.3 250.629C1174.37 252.905 1174.91 255.388 1174.91 258.094C1174.91 261.5 1174.13 264.37 1172.61 266.749C1171.09 269.129 1168.79 271.082 1165.65 272.585L1165.64 272.589L1165.63 272.593C1162.93 273.946 1160.02 274.624 1156.89 274.624C1152.96 274.624 1149.68 273.865 1147.01 272.397C1144.35 270.933 1142.24 268.732 1140.69 265.755ZM1141.66 417.007V296.507H1171.49V417.007H1141.66Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-12"
+              ></path>
+              <path
+                d="M1206.82 372.041V296.507H1236.86V367.981C1236.86 374.958 1237.7 380.592 1239.45 384.824C1241.2 389.08 1243.9 391.964 1247.57 393.292L1247.58 393.296L1247.59 393.3C1249.84 394.052 1252.3 394.421 1254.96 394.421C1263.13 394.421 1270.44 390.764 1276.85 383.614C1278.16 382.165 1279.45 380.573 1280.75 378.841L1280.95 378.575V378.242V296.507H1311V417.007H1286.8L1284.36 400.331L1284.23 399.476H1283.37H1282.52H1282.07L1281.77 399.81C1269.94 413.056 1257.16 419.717 1243.42 420C1231.19 419.857 1222.15 415.799 1216.12 407.938C1210.04 400.026 1206.89 388.114 1206.82 372.041Z"
+                fill="#363A35"
+                stroke="#363A35"
+                stroke-width="2"
+                class="svg-elem-13"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_1903_78903">
+                <rect
+                  width="1312"
+                  height="421"
+                  fill="white"
+                  class="svg-elem-14"
+                ></rect>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="line line1"></div>
+          <div class="wordGroup">
+            <h2 id="jobTitle"></h2>
+            <p id="introContent"></p>
+          </div>
+          <div class="line line2"></div>
+        </div>
+      </section>
+      <section data-scroll-section class="lifeSection" id="test">
+        <div class="target"></div>
+        <div
+          class="DT_picture pictureGallery"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-15"
+          data-scroll-target=".target"
+          data-scroll-offset="100,100%"
+        >
+          <img src="./asset/img/DT1.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/DT2.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/DT3.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/DT4.webp" alt="" class="singlePicture" />
+        </div>
+        <div
+          class="OT_picture pictureGallery"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="15"
+          data-scroll-target=".target"
+        >
+          <img src="./asset/img/OD1.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/OD2.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/OD3.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/OD4.webp" alt="" class="singlePicture" />
+        </div>
+
+        <div
+          class="CO_picture pictureGallery"
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-15"
+          data-scroll-target=".target"
+        >
+          <img src="./asset/img/OD1.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/OD2.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/OD3.webp" alt="" class="singlePicture" />
+          <img src="./asset/img/OD4.webp" alt="" class="singlePicture" />
+        </div>
+        <div class="DT_banner banner">
+          <img
+            src="./asset/img/DT_banner.svg"
+            alt="DT_banner banner"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="15"
+            data-scroll-target=".target"
+          />
+        </div>
+        <div class="OT_banner banner">
+          <img
+            src="./asset/img/OT_banner.svg"
+            alt="OT_banner"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-15"
+            data-scroll-target=".target"
+          />
+        </div>
+        <div class="CO_banner banner">
+          <img
+            src="./asset/img/CO_banner.svg"
+            alt="CO_banner"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="15"
+            data-scroll-target=".target"
+          />
+        </div>
+      </section>
+      <section
+        data-scroll-section
+        data-scroll-direction="horizontal"
+        class="worksSection"
+      >
+        <div data-scroll class="workTypeSwitchGroup">
+          <p class="workTypeSwitch--active workTypeSwitch__uiux">UIUX</p>
+          <p class="workTypeSwitch workTypeSwitch__fe">Frontend</p>
+          <p class="workTypeSwitch workTypeSwitch__all">All</p>
+        </div>
+        <div data-scroll class="worksGroup">
+          <div class="work work--1" status="closed">
+            <div class="work__header work__header--1">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  POS TW/HK 金流串接正逆流程設計
+                </h2>
+                <h4 class="header__titleGroup--tags">UX Design • 實習專案</h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--1"
+              />
+            </div>
+            <div class="work__content work__content--1">
+              <img src="./asset/img/project_pos.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    為 SHOLINE POS
+                    台灣與香港版金流串接需求，設計金流正逆流成的設計稿
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    完成 6 項正逆金流系統操作流程設計，涵蓋 3
+                    種金流、非金流付款方式與多種付款結果處理（成功、失敗、離線、操作錯誤…），範圍涉及後台設定、POS
+                    結帳/取消/退貨流程與刷卡機結帳功能，並進行上線前的 UI Test
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">閱讀專案 >>></p>
+              </div>
+            </div>
+          </div>
+          <div class="workSeperationLine"></div>
+          <div class="work work--2" status="closed">
+            <div class="work__header work__header--2">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  設計系統架構設計與整理
+                </h2>
+                <h4 class="header__titleGroup--tags">UIUX Design • 實習專案</h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--2"
+              />
+            </div>
+            <div class="work__content work__content--2">
+              <img src="./asset/img/sampleImg.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    以「提升使用效率」、「提升上手速度」、「維護完整性與正確性」為目標，進行設計系統架構重設計、元件再造與使用情境盤點
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    經過訪談與調查共整理出 5 項主要問題，並整理 45
+                    種元件與相關規範。最終提出新的設計系統架構與團隊維護方式，落地使用並不斷進行迭代
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">閱讀專案 >>></p>
+              </div>
+            </div>
+          </div>
+          <div class="workSeperationLine"></div>
+          <div class="work work--3" status="closed">
+            <div class="work__header work__header--3">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  Shopperapp UI 介面優化設計
+                </h2>
+                <h4 class="header__titleGroup--tags">UI Design • 實習專案</h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--3"
+              />
+            </div>
+            <div class="work__content work__content--3">
+              <img src="./asset/img/sampleImg.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    協助 SHOPLINE 進行 APP
+                    元件優化以滿足店家在會員與銷售上的需求
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    提交約 5 項 UI 元件視覺與邏輯調整之設計稿，並於上線前進行 UI
+                    Testing
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">閱讀專案 >>></p>
+              </div>
+            </div>
+          </div>
+          <div class="workSeperationLine"></div>
+          <div class="work work--4" status="closed">
+            <div class="work__header work__header--4">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  台北市社會局公托登記與抽籤系統網站改造
+                </h2>
+                <h4 class="header__titleGroup--tags">
+                  UX Design • UX Research • 實習專案
+                </h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--4"
+              />
+            </div>
+            <div class="work__content work__content--4">
+              <img src="./asset/img/sampleImg.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    為台北市公托登記報名與抽籤系統進行使用者研究與再設計。讓民眾能一站完成規則了解、機構查詢、登記候補...等所有作業流程
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    設計公托登記報名與抽籤系統的 Hi-Fi
+                    原型，並進行提案與提供未來設計建議 Testing
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">
+                  <a href="pages/projectPDIS.html">閱讀專案 >>></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="workSeperationLine"></div>
+          <div class="work work--5" status="closed">
+            <div class="work__header work__header--5">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  BizPro 台大商學研究社官方網站設計與開發
+                </h2>
+                <h4 class="header__titleGroup--tags">
+                  UIUX Design • Frontend Development • 個人接案
+                </h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--5"
+              />
+            </div>
+            <div class="work__content work__content--5">
+              <img src="./asset/img/sampleImg.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    擔任設計師與工程師，協助 BizPro
+                    台大商學研究社的重新設計網站與後續開發...等所有作業流程
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    完成網站設計稿與開發上線，協助社團進行形象建立與宣傳的效果
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">閱讀專案 >>></p>
+              </div>
+            </div>
+          </div>
+          <div class="workSeperationLine"></div>
+          <div class="work work--6" status="closed">
+            <div class="work__header work__header--6">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  北管樂混音器「工尺」操作展示網站
+                </h2>
+                <h4 class="header__titleGroup--tags">
+                  Frontend Development • 個人接案
+                </h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--6"
+              />
+            </div>
+            <div class="work__content work__content--6">
+              <img src="./asset/img/sampleImg.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    協助台科大畢業生製作展示網站，讓使用者於網站上操作工尺混音器的功能
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    以步驟式的引導，帶領使用者了解北管文化，同時體驗與操作工尺的各種混音與演奏功能
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">閱讀專案 >>></p>
+              </div>
+            </div>
+          </div>
+          <div class="workSeperationLine"></div>
+          <div class="work work--7" status="closed">
+            <div class="work__header work__header--7">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  「森活」永續森林倡議型互動式動畫網站
+                </h2>
+                <h4 class="header__titleGroup--tags">
+                  Frontend Development • 競賽作品
+                </h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--7"
+              />
+            </div>
+            <div class="work__content work__content--7">
+              <img src="./asset/img/sampleImg.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    參與第五屆台灣青年黑克松競賽，以SDGs中永續森林為主題，在 50
+                    小時內製作互動式動畫網頁
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    設計遊戲化測驗，依照結果提供不同使用者相應的森林永續宣導頁面，搭配互動試動畫設計，獲得冠軍與最佳人氣獎
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">閱讀專案 >>></p>
+              </div>
+            </div>
+          </div>
+          <div class="workSeperationLine"></div>
+          <div class="work work--8" status="closed">
+            <div class="work__header work__header--8">
+              <div class="header__titleGroup">
+                <h2 class="header__titleGroup--title">
+                  IM 訊息接收者對傳送者收回訊息行為的解讀
+                </h2>
+                <h4 class="header__titleGroup--tags">
+                  Frontend Development • 競賽作品
+                </h4>
+              </div>
+              <img
+                src="./asset/img/plus.svg"
+                alt="plus"
+                class="plusButton plusButton--8"
+              />
+            </div>
+            <div class="work__content work__content--8">
+              <img src="./asset/img/sampleImg.jpg" alt="sample" />
+              <div class="content__contentGroup">
+                <div class="contentBox">
+                  <h4 class="content__contentGroup--title">
+                    台師大袁千雯教授 - 人機互動與社群運算研究課程專題，研究 IM
+                    使用者在通訊軟體 Line
+                    中使用收回功能時，其使用動機與解讀方式。
+                  </h4>
+                  <p class="content__contentGroup--content">
+                    整理訊息接收者對於傳訊者收回訊息行為的解讀，給予傳訊策略。最終投稿於
+                    TAICHI 2022 人機互動言討會論文海報組別進行展示
+                  </p>
+                </div>
+                <p class="content__contentGroup--link">閱讀專案 >>></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-scroll-section class="infoSection">
+        <!-- <img data-scroll src="./asset/img/sampleImg2.jpg" alt="sampleImg2" /> -->
+        <div data-scroll class="wordGroup">
+          <div class="wordContainer">
+            <h1>Resume</h1>
+            <div class="underline"></div>
+          </div>
+          <div class="wordContainer">
+            <h1>Medium</h1>
+            <div class="underline"></div>
+          </div>
+          <div class="wordContainer">
+            <h1>Linkedin</h1>
+            <div class="underline"></div>
+          </div>
+          <div class="wordContainer">
+            <h1>Facebook</h1>
+            <div class="underline"></div>
+          </div>
+          <div class="wordContainer" style="margin-bottom: 0px">
+            <h1>Instagram</h1>
+            <div class="underline"></div>
+          </div>
+        </div>
+        <div class="intro">
+          <p>
+            我是邱威辰，畢業於國立臺灣大學經濟學系，也是臺大 D-school
+            創意創業學程 13th 畢業學員，以及一位 UX 設計師與設計思考引導教練。
+          </p>
+          <p>
+            自 2020 年起，我開始接觸 UX
+            設計、研究與前端開發領域，在這期間透過課程、競賽、實習等實作機會，實踐並加強過去所學的技巧與理論，結合實務層面的限制與不同領域的人協作和溝通，產出具體的服務與產品。
+          </p>
+          <p>
+            2021 年，為了於真實的場域中實踐使用者中心設計，我參與了第 5
+            屆唐鳳辦公室的青年學生體檢政府網站數位服務專案。在擁有廣大的使用者群與諸多限制的政府專案中，我運用質化研究與設計技巧，建立能兼顧使用者體驗與限制的設計。在現實場域中，我體會到需要充分考量各方限制，以在提升使用者體驗的同時，提高設計決策的可行度。
+          </p>
+          <p>
+            此外，2022 年我也擔任 SHOPLINE 的 UX Designer
+            實習生，在電商領域中學習商業與設計間的結合與取捨。於實習期間，我負責設計系統架構再設計、POS
+            系統金流正逆流成串接、APP UI
+            介面優化等，涵蓋不同領域的專案，以增進自己處理複雜系統流程與設計發散的能力。在實作過程中與不同團隊的討論與溝通，讓我了解到溝通對於產品開發的重要性，也訓練自己如何以提升使用者體驗為前提，在開發資源有限的情況下，進行需求與實作方式的溝通。
+          </p>
+          <p style="margin: 0px">
+            未來，我將持續精進自己在產品設計和使用者研究的實務技巧。同時，我也會以設計思考教練身分，磨練團隊引導技巧並分享所學。除了設計相關領域，我也曾加入
+            BizPro
+            台大商學研究社學習管顧思維與假說思考，以培養自己從使用者到商業、更加全面的產品思維。我希望透過這些跨領域的學習，將所學的知識融會貫通，期許自己不僅能做出一個好設計，也能創造對使用者和商業皆具意義的好產品。
+          </p>
+        </div>
+        <img src="./asset/img/intro.webp" alt="intro_img" />
+      </section>
+    </div>
+  </body>
+</html>
