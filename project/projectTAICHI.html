@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../util/viewportdetector.min.js" defer></script>
+    <script src="../util/anchorGenerator.js" defer></script>
+    <title>IM 訊息接收者對傳送者收回訊息行為的解讀</title>
+    <link rel="icon" href="../asset/img/favicon.png" type="image/png" />
+  </head>
+  <body id="projectSection">
+    <article class="header">
+      <div
+        class="coverImg"
+        style="
+          background-image: url('../asset/img/projectImg/project_taichi-cover.webp');
+        "
+      >
+        <h1>IM 訊息接收者對傳送者收回訊息行為的解讀</h1>
+        <img src="../asset/img/projectImg/projectCover_deco.svg" alt="" />
+      </div>
+      <div class="projectDescription">
+        <div class="projectDescription__block">
+          <h2>專案簡介</h2>
+          <p>
+            台師大袁千雯教授 - 人機互動與社群運算研究課程專題，研究 IM
+            使用者在通訊軟體 Line 中使用收回功能時，其使用動機與解讀方式。
+          </p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案成果</h2>
+          <p>
+            整理訊息接收者對於傳訊者收回訊息行為的解讀，給予傳訊策略。最終投稿於
+            TAICHI 2022 人機互動言討會論文海報組別進行展示
+          </p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案時長</h2>
+          <p>
+            第一階段研究：Oct. 2021 ~ Dec. 2021（3 個月）<br />第二階段研究：Sep.
+            2022 ~ Oct. 2022（2 個月）
+          </p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案角色</h2>
+          <p>UX Researcher</p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案成員</h2>
+          <p>邱威辰、沈于晴</p>
+        </div>
+      </div>
+    </article>
+    <article class="projectContentContainer">
+      <div class="anchorSection"></div>
+      <div class="contentSection">
+        <div class="contentContainer">
+          <h2 class="title title--1">專案背景</h2>
+          <div class="flexbox">
+            <div class="pContainer">
+              <p>
+                本專案為台師大袁千雯教授 -
+                人機互動與社群運算研究課程專題的延伸作品，以 IM（即時通訊
+                Instant
+                Message）使用者為題進行收回訊息行為與動機的研究，最終成果展示於
+                2022 TAICHI 海報論文組「IM
+                訊息接收者對傳送者收回訊息行為的解讀」。
+              </p>
+              <p>
+                IM
+                平台上提供之收回功能，其原意是希望在對方尚未看到自己不恰當的訊息之前，提供訊息傳送者一個反悔的機會，以免造成人際關係上的危機，彌補現實對話中「講出去的話就收不回來」的尷尬處境。在日常使用中，人們會利用收回功能機制來試圖展現自己的狀態或解讀別人的狀態。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--2">研究目的</h2>
+          <div class="flexbox">
+            <div class="pContainer">
+              <p>
+                相較於面對面互動，人們可以透過肢體、臉部表情等非語言訊息展現自己的狀態。在電腦中介傳播的情境中（Computer-mediated
+                Communication, CMC）
+                缺乏視覺、非語言線索的特性，人們會利用即時通訊軟體（Instant
+                messenger, IM）
+                上不同功能與介面呈現來試圖展現自己的狀態或解讀別人的狀態，以達到彼此的共同理解（Grounding）。
+              </p>
+              <h3 class="semiTitle">
+                收回訊息功能不只是反悔，也被應用於意思表達
+              </h3>
+              <p>
+                前導研究初步發現其中一類使用收回功能的原因為藉由收回功能機制和收回標籤（如
+                LINE
+                上的「您已收回訊息」）作為意思表達，作為轉移話題、提醒對方重視訊息、表示自己尋求關心使用...功能。
+              </p>
+              <p>
+                本研究延伸前導研究，針對情侶的特定關係，探討 LINE
+                中的收回行為若被作為意思表達工具的情況下，共同理解、平台功能設計及對話脈絡如何影響接收者解讀收回行為，並影響與傳送者之間的關係。研究結果將有助於了解訊息傳送策略，降低情侶之間利用
+                IM 聊天的溝通問題。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--3">研究方法</h2>
+          <div class="flexbox">
+            <div class="pContainer">
+              <p>
+                本研究透過問卷了解每對情侶平時的收回行為，並篩選實體見面頻率高、一對一傳送訊息管道以
+                LINE 為主、收回頻率只少 5
+                天一次且收回原因多樣者，最終挑選交往時間自 1 - 3 個月到 2 - 3
+                年的情侶共 6 組進行訪談，受訪者年齡平均為 21
+                歲，每次訪談時間每對情侶共 2 小時，情侶雙方個別訪談 1
+                小時並輪流分開受訪。
+              </p>
+              <p>
+                本研究要求每一位受訪者在訪談前以截圖 5 組、近三個月於 LINE
+                上與其伴侶過去對話過程中，自己使用收回功能的對話紀錄。並以這些紀錄進行訪談來了解該收回行為發生的情境脈絡與行為動機，同時也詢問受訪者對於其伴侶選擇的收回行為情境中，對於伴侶收回行為的解讀作以在後續分析時進行動機與解讀的比較。
+              </p>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_taichi-1.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical"
+            />
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--4">研究成果</h2>
+          <div class="flexbox">
+            <div class="pContainer pContainer--top">
+              <h3 class="semiTitle">
+                Line 中取代非語言線索的三種介面與對話線索
+              </h3>
+              <p>
+                在面對面的對話中，雙方可以透過觀察非語言的線索來理解對方的意思，例如：看到有人眼神飄忽，可能是對我說的話題不感興趣。在
+                CMC
+                中缺乏肢體與表情作為非語言線索，接收者則會觀察介面上所呈現的視覺效果，並搭配當時的對話脈絡，來判斷該則被收回的訊息可能的性質為何，包含理由、訊息內容與收回當下對方的情緒。根據分析，本研究發現主要有以下三種：
+              </p>
+              <h4 class="smallTitle">1. 收回與補打訊息的時間間隔</h4>
+              <p>
+                當訊息在傳送之後過了一段時間才被收回或是收回之後過了一段時間才補打訊息，此時間差會使接受者認為傳送者有進行思考，該收回行為會被傾向解讀為反悔傳送訊息；若是傳送訊息之後馬上被收回，則會傾向被解讀為單純的打錯字。
+              </p>
+              <h4 class="smallTitle">2. 當時的對話脈絡</h4>
+              <p>
+                如果當時的對話脈絡原先處於生氣、內疚、消極等負面情緒，傳訊者的收回行為會被接收者傾向負面解讀，甚至被認為收回是故意為之；當對話脈絡較為輕鬆時，收回則會被傾向解讀為無關緊要的事情或單純的打錯字。
+              </p>
+              <h4 class="smallTitle">3. 收回標籤的數量與密度</h4>
+              <p>
+                接收者會根據傳訊者一次收回的數量來判斷被收回訊息的性質。當連續多則訊息被收回時（約3則以上），接收者會傾向將被收回的訊息解讀為欲言又止的獨立資訊而非失誤。
+              </p>
+            </div>
+            <div class="pContainer">
+              <h3 class="semiTitle">建立共同理解（Common Ground）的方式</h3>
+              <p>
+                研究發現除了介面視覺與對話脈絡，傳訊雙方亦會通過過往經驗來判斷對方使用收回的動機，可分為單方觀察與雙方溝通兩種：
+              </p>
+              <h4 class="smallTitle">1. 單方觀察傳訊經驗</h4>
+              <p>
+                意指接收者單方面觀察對方傳訊的模式，例如：訊息量、已讀未讀、時間點，通常是接收者看到收回訊息的瞬間，或透過長期觀察對方收回當下的對話脈絡及功能狀態來累積知識並反覆驗證。
+              </p>
+              <h4 class="smallTitle">2. 雙方溝通過的經驗</h4>
+              <p>
+                通常是透過直接詢問收回理由，或是藉由其他媒介，例如電話、實體討論所建立的經驗。接收者在判斷一則新的收回行為時，會根據過去經驗的對話脈絡及功能狀態，例如：訊息量、已讀未讀、時間點，比對是否跟之前的情況符合並解讀理由。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--5">未來規劃與改進</h2>
+          <div class="flexbox">
+            <div class="pContainer">
+              <p>
+                本次研究所收集的情侶雖然交往時間已平均分配，但年齡較集中於 19 -
+                22
+                歲之間，且交往時間較長的情侶組數過少，使得無法做跨組的比較，未來研究可以針對不同交往時間與年齡層的情侶，在觀察與使用收回行為時有何不同。
+              </p>
+              <p>
+                另外本次著重於通訊軟體 LINE
+                上的收回行為，但其他台灣常用的通訊軟體如 Messenger、Instagram
+                等針對其收回功能都有不同的規定，如： Instagram
+                在收回時不會留下標籤、且一定會通知接收方； Messenger
+                可以收回訊息的時限短，且收回標籤與其他訊息並排，這些不同的設計功能與規則可能影響收回功能的使用與解讀，也是本研究未來可以延伸的主題。
+              </p>
+              <div class="buttonGroup">
+                <a
+                  href="https://sites.google.com/nycu.edu.tw/taichi2022/home?authuser=0"
+                  target="_blank"
+                >
+                  <p class="button">2022 TAICHI 官網</p></a
+                >
+                <a
+                  href="https://drive.google.com/file/d/1cI0S_KCWYoxT3DvD1jzc0C0oGQ0VbR-t/view?usp=sharing"
+                  target="_blank"
+                >
+                  <p class="button button--last">論文海報連結</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>

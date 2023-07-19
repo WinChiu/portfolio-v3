@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopline 設計系統架構設計與整理</title>
+    <link rel="icon" href="../asset/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../util/viewportdetector.min.js" defer></script>
+    <script src="../util/anchorGenerator.js" defer></script>
+  </head>
+  <body id="projectSection">
+    <article class="header">
+      <div
+        class="coverImg"
+        style="
+          background-image: url('../asset/img/projectImg/project_ds-cover.webp');
+        "
+      >
+        <h1>Shopline 設計系統架構設計與整理</h1>
+        <img src="../asset/img/projectImg/projectCover_deco.svg" alt="" />
+      </div>
+      <div class="projectDescription">
+        <div class="projectDescription__block">
+          <h2>專案簡介</h2>
+          <p>
+            以「提升使用效率」、「提升上手速度」、「維護完整性與正確性」為目標，進行設計系統架構重設計、元件再造與使用情境盤點
+          </p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案成果</h2>
+          <p>
+            經過訪談與調查共整理出 5 項主要問題，並整理 45
+            種元件與相關規範。最終提出新的設計系統架構與團隊維護方式，落地使用並不斷進行迭代
+          </p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案時長</h2>
+          <p>May. 2022 ~ Jul. 2022（2.5 個月）</p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案角色</h2>
+          <p>UX Designer</p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案成員</h2>
+          <p>邱威辰</p>
+        </div>
+      </div>
+    </article>
+    <article class="projectContentContainer">
+      <div class="anchorSection"></div>
+      <div class="contentSection">
+        <div class="contentContainer">
+          <h2 class="title title--1">專案背景</h2>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <p>
+                本次重新設計的系統為 SHOPLINE Ecommerce 產品線中的 V2.0
+                設計系統。此系統用於 B
+                端產品的後台管理頁面，提供使用者進行網路商店的相關設計、訂單處理等各項功能，是
+                SHOPLINE 主要產品設計系統之一。
+              </p>
+              <p>
+                目前，此設計系統建構於 Figma
+                文件中，被大量設計師和工程師應用於電子商務產品線的介面中，對於維持產品的
+                UIUX
+                一致性有重要的影響。然而，由於過去尚未建立一套完整的設計系統管理方式、使用情境規範不完整，且部分元件是從
+                Sketch 轉檔而來，導致設計師無法得知各元件的使用情境、Figma
+                元件破損、查找不易等問題，降低使用效率，也導致產品中部分設計規範無法對齊，產生隨需求自由心證的情況，破壞了設計上的一致性。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--2">實作流程</h2>
+          <div class="flexbox flexbox__vertical">
+            <img
+              src="../asset/img/projectImg/project_ds-method.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical"
+              style="margin-top: 16px"
+            />
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--3">問題定義</h2>
+          <div class="flexbox flexbox__vertical flexbox__vertical--middle">
+            <div class="pContainer pContainer--top">
+              <h3 class="semiTitle">
+                1. 各元件無定義使用情境，難以根據設計系統創建新頁面
+              </h3>
+              <p class="pLast">
+                當設計師面對需求需要規劃新頁面時，因為沒有定義使用情境，導致無法確認應該使用哪一個元件（例如：何時該使用
+                Secondary
+                Button？）、或應該遵照什麼規範（例如：主標與副標的間距為何？），使得設計師需要參照過去已上線的頁面，或和其他設計師確認，但此作法也提高了介面不一致的風險。
+              </p>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_ds-define1.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical"
+            />
+          </div>
+          <div class="flexbox flexbox__vertical flexbox__vertical--middle">
+            <div class="pContainer pContainer--top">
+              <h3 class="semiTitle">
+                2.
+                元件命名與歸檔方式無統一規則，造成歸檔不符使用方式，難易查找元件
+              </h3>
+              <p class="pLast">
+                許多元件缺漏與命名方式的不統一，導致無法使用搜尋的方式找到需要的原件，加上情境定義不明的問題，使得每次使用元件時都需要回到設計系統主文件中查找。
+              </p>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_ds-define2.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical"
+            />
+          </div>
+          <div class="flexbox flexbox__vertical flexbox__vertical--middle">
+            <div class="pContainer pContainer--top">
+              <h3 class="semiTitle">
+                3. 無統一架構進行資源管理，導致元件與規範分散無法同步
+              </h3>
+              <p class="pLast">
+                現行的設計系統具有，元件 /
+                規範為中心兩種方式並行歸檔，造成內容重複，例如：命名為 Flow
+                的文件含有所有元件的互動方式（如：menu bar
+                的互動模式），但也同時具有記錄各個元件規格的頁面（如：menu bar
+                的顏色規範），分屬不同頁面且內容部分重複。
+              </p>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_ds-define3.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical flexboxImg__vertical--small"
+            />
+          </div>
+          <div class="flexbox flexbox__vertical flexbox__vertical--middle">
+            <div class="pContainer">
+              <h3 class="semiTitle">4. 規範編寫無統一格式，閱讀效率低</h3>
+              <p>
+                各元件頁面之規範無統一個書寫規定，除了缺乏情境定義，基本樣式、狀態、互動方式等其他要素皆不齊全，不一定可以在文件中找到相關規範。
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <h3 class="semiTitle">
+                5. 無明確的更新機制，使得設計系統時常無法與線上版本對齊
+              </h3>
+              <p>
+                目前產品中的元件大致可分為 V2
+                原版、工程師依個案自創版、設計師依個案自創版、其他 UI kit，4
+                種版本。這些版本間無明確的溝通與更新機制，導致 V2
+                原版設計系統無法及時更新元件與規範，讓 V2 的內容越來越過時。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--4">專案目標</h2>
+          <div class="flexbox flexbox__vertical">
+            <img
+              src="../asset/img/projectImg/project_ds-target.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical"
+            />
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--5">解決方案</h2>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <h3 class="semiTitle">重整文件架構</h3>
+              <p>
+                根據設計師既有的使用習慣，並以維護品質為目標，利用下面的架構整理元件:
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <div class="pContainer pContainer--top">
+              <h4 class="smallTitle">Introduction</h4>
+              <ul>
+                <li>檔案層級與用途說明</li>
+                <li>文件瀏覽與取用說明</li>
+                <li>元件建立、使用、命名規範、更新方式說明</li>
+                <li>註解方式說明</li>
+              </ul>
+              <h4 class="smallTitle">All Components</h4>
+              <ul>
+                <li>按類型與狀態，歸類存放元件之子元件</li>
+                <li>建立元件目錄，並連接到 full guide 中對應的元件</li>
+                <li>僅作為取用與查找，此頁面元件不可修正</li>
+              </ul>
+              <h4 class="smallTitle">Full Guide</h4>
+              <ul>
+                <li>編寫完整規範，存放元件之父元件</li>
+                <li>建立連結連接至 All Components 頁面中對應的子元件</li>
+                <li>作為規範編寫與設計更新使用，此頁面元件不可取用</li>
+              </ul>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_ds-structure.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--middle"
+              style="margin-top: 12px"
+            />
+          </div>
+          <div class="flexbox flexbox__vertical flexbox__vertical--middle">
+            <div class="pContainer">
+              <h3 class="semiTitle">
+                區隔父元件與子元件確保維護性，連接元件與規範以互相參照
+              </h3>
+              <p>
+                在 All Component
+                頁面中，將存放所有元件的子元件，使用者僅需要在此頁面直接尋找需要的元件取用即可，子元件的特性也可避免破壞設計系統的整體元件。
+              </p>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_ds-allComponents.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+            />
+            <div class="pContainer">
+              <p>
+                另外也在各子元件的區域右上角，附上 storybook 與 full guide
+                的連結，方便使用者可以取得元件的線上狀態，對規範或使用情境有疑問時也可直接連接到對應的
+                full guide。
+              </p>
+              <p class="pLast">
+                而在 full guide 頁面中的右上角也附上 storybook 與 all component
+                的連結，在閱讀完規範後可以直接回到 all component
+                頁面進行取用，也避免直接動到母元件。
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_ds-fullGuideBadge.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <img
+              src="../asset/img/projectImg/project_ds-allComponentBadge.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal"
+            />
+          </div>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <h3 class="semiTitle">定義統一編寫樣式與格式</h3>
+              <p>
+                建立自查表，規範各元件可包含以下 7 項固定標題：Usage、 Spec、
+                Content、 Layout、 Application、 Asset、
+                Components，並規定各標題之下需編寫的內容。
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_ds-document1.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <img
+              src="../asset/img/projectImg/project_ds-document2.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal"
+            />
+          </div>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <h3 class="semiTitle">建立回報表，即時更新元件狀態</h3>
+              <p>
+                紀錄遇到的元件問題，並指派相關人員進行修正；定期於週會確認待處理的元件問題，並討論解決方案。
+              </p>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_ds-report.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical"
+            />
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--6">專案成果</h2>
+          <div class="pContainer">
+            <p>
+              經過訪談與調查共整理出 5 項主要問題，並整理了 45
+              種電商相關元件與設計規範。最終提出新的設計系統架構與團隊維護方式，落地使用並不斷進行迭代。
+            </p>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--7">專案心得</h2>
+          <div class="flexbox">
+            <div class="pContainer">
+              <p>
+                經過本次專案的實作，我發現設計系統對於產品一致性有重要影響，若設計系統未以「情境」為中心進行規範編寫，則
+                Design System 只能當成存放元件的 UI
+                kit，無法提供有效的實作面參考；而當規範與元件散落在不同文件內時，容易提升每次實作時的時間成本，上述皆會造成產品的設計的過程中，不一致的問題逐漸擴大。
+              </p>
+              <p>
+                而不同職位的人對設計系統也有不同的需求，統一的命名關係到程式編寫效率、設計師查找元件效率、產品測試時埋點效率...
+                等；另外，無效的溝通也容易使元件使用狀態不同步，可能造成工程師與設計師所使用的元件不同的情況。因此不同職位之間對於設計系統內容的同步與更新機制也顯得十分重要，不只關乎設計師，更是維護產品品質的關鍵之一。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>

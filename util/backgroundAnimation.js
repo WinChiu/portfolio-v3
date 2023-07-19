@@ -1,19 +1,18 @@
 const colorChangeInterval = 80;
-const animationDelayTime = 2000;
-const colorTransitionDelay = 0.2;
+const animationDelayTime = 1800;
+const colorTransitionDelay = 0.3;
 
 const colorCycle = (target, i) => {
   i = 1 - i;
   const colors = [
     '#e8e8e8',
     '#E4E4E4',
-    '#D6D6D6',
-    '#C8C8C8',
-    '#D6D6D6',
+    '#DEDEDE',
+    '#DADADA',
+    '#DEDEDE',
     '#E4E4E4',
     '#e8e8e8',
   ];
-
   const element = document.querySelector(target);
   element.style.transition = `background-color ${colorTransitionDelay}s ease`;
 
@@ -49,12 +48,10 @@ const setRow = (row, column) => {
 
 const setBoxes = (boxRow, boxColumn) => {
   const animationCanvas = document.querySelector('.animationCanvas');
-
   for (let i = 0; i < boxRow; i++) {
     const boxContainer = document.createElement('div');
     boxContainer.className = `container${i + 1} container`;
     animationCanvas.appendChild(boxContainer);
-
     for (let j = 0; j < boxColumn; j++) {
       const box = document.createElement('div');
       box.className = `box${j + 1 + boxColumn * i} box`;

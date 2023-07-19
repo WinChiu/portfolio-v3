@@ -1,4 +1,6 @@
 const worksCount = document.getElementsByClassName('work').length;
+const url = window.location.pathname.split('/');
+if (url[url.length - 1] === '') $('body').css('cursor', 'none');
 
 // LocomotiveScroll Setting
 const scroll = new LocomotiveScroll({
@@ -16,7 +18,7 @@ new ResizeObserver(() => scroll.update()).observe(
 // Intro Background
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
-  return rect.top <= (window.innerHeight * 5) / 6;
+  return rect.top <= (window.innerHeight * 3) / 6;
 }
 scroll.on('scroll', () => {
   if (isInViewport(document.querySelector('.infoSection'))) {
@@ -27,7 +29,6 @@ scroll.on('scroll', () => {
     $('.animationCanvas').css('opacity', '100%');
   }
 });
-
 $(window).resize(function () {
   scroll.update();
   for (let i = 1; i <= worksCount; i++) {
@@ -36,7 +37,16 @@ $(window).resize(function () {
       $(`.work--${i}`).css('transition-duration', '0s');
       $(`.work--${i}`).css(
         'max-height',
-        `${parseInt($(`.work__header--${i}`).css('height')) + 28}px`
+        `${parseInt($(`.work__header--${i}`).css('height')) + 32}px`
+      );
+      setTimeout(() => {
+        $(`.work--${i}`).css('transition-duration', '0.5s');
+      }, 100);
+    } else {
+      $(`.work--${i}`).css('transition-duration', '0s');
+      $(`.work--${i}`).css(
+        'max-height',
+        `${parseInt($(`.work--${i}`).css('height')) + 32}px`
       );
       setTimeout(() => {
         $(`.work--${i}`).css('transition-duration', '0.5s');
@@ -47,7 +57,7 @@ $(window).resize(function () {
 
 // Set works button system
 for (let i = 1; i <= worksCount; i++) {
-  $(`.plusButton--${i}`).on('click', function () {
+  $(`.work__header--${i}`).on('click', function () {
     let status = $(`.work--${i}`).attr('status');
     if (status === 'closed') {
       $(`.work--${i}`).css(
@@ -75,6 +85,35 @@ for (let i = 1; i <= worksCount; i++) {
       }, 600);
     }
   });
+
+  // $(`.plusButton--${i}`).on('click', function () {
+  //   let status = $(`.work--${i}`).attr('status');
+  //   if (status === 'closed') {
+  //     $(`.work--${i}`).css(
+  //       'max-height',
+  //       `${
+  //         parseInt($(`.work__header--${i}`).css('height')) +
+  //         parseInt($(`.work__content--${i}`).css('height')) +
+  //         64
+  //       }px`
+  //     );
+  //     $(`.work--${i}`).attr('status', 'open');
+  //     $(`.plusButton--${i}`).css('transform', `rotate(45deg)`);
+  //     setTimeout(() => {
+  //       // scroll.update();
+  //     }, 600);
+  //   } else {
+  //     $(`.work--${i}`).css(
+  //       'max-height',
+  //       `${parseInt($(`.work__header--${i}`).css('height')) + 28}px`
+  //     );
+  //     $(`.work--${i}`).attr('status', 'closed');
+  //     $(`.plusButton--${i}`).css('transform', `rotate(0deg)`);
+  //     setTimeout(() => {
+  //       // scroll.update();
+  //     }, 600);
+  //   }
+  // });
 }
 
 // Close all works
@@ -84,10 +123,12 @@ $('.work').css(
 );
 
 // Title draw animation
-var wrapper = document.querySelector('.titleName');
+var titleNameL = document.querySelector('.titleNameL');
+var titleNameS = document.querySelector('.titleNameS');
 function draw() {
   scroll.update();
-  wrapper.classList.add('active');
+  titleNameL.classList.add('active');
+  titleNameS.classList.add('active');
 }
 setTimeout(draw, 300);
 
@@ -120,21 +161,25 @@ setTimeout(() => {
 }, 4400);
 
 // Cursor setting
-const cursor = curDot({
-  zIndex: 2,
-  diameter: 40,
-  borderWidth: 1,
-  borderColor: 'transparent',
-  easing: 4,
-  background: '#ddd',
-});
+if (!/Android|iPhone/i.test(navigator.userAgent)) {
+  const cursor = curDot({
+    zIndex: 2,
+    diameter: 40,
+    borderWidth: 1,
+    borderColor: '#fff',
+    easing: 4,
+  });
 
-// cursor.over('span.selector', {
-//   borderColor: 'rgba(255,255,255,.38)',
-//   broderWidth: 2,
-// });
-
-cursor.over('.plusButton', {
-  scale: 0.5,
-  background: '#fff',
-});
+  cursor.over('.work__header', {
+    scale: 2,
+    background: '#fff',
+  });
+  cursor.over('.infoLink', {
+    scale: 2,
+    background: '#fff',
+  });
+  cursor.over('.content__contentGroup--link', {
+    scale: 2,
+    background: '#fff',
+  });
+}

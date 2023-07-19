@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopperapp UI 介面優化設計</title>
+    <link rel="icon" href="../asset/img/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../util/viewportdetector.min.js" defer></script>
+    <script src="../util/anchorGenerator.js" defer></script>
+  </head>
+  <body id="projectSection">
+    <article class="header">
+      <div
+        class="coverImg"
+        style="
+          background-image: url('../asset/img/projectImg/project_SLUI-cover.webp');
+        "
+      >
+        <h1>Shopperapp UI 介面優化設計</h1>
+        <img src="../asset/img/projectImg/projectCover_deco.svg" alt="" />
+      </div>
+      <div class="projectDescription">
+        <div class="projectDescription__block">
+          <h2>專案簡介</h2>
+          <p>協助 SHOPLINE 進行 APP 元件優化以滿足店家在會員與銷售上的需求</p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案成果</h2>
+          <p>
+            提交約 5 項 UI 元件視覺與邏輯調整之設計稿，並於上線前進行 UI Testing
+          </p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案時長</h2>
+          <p>Nov. 2022（3 周）</p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案角色</h2>
+          <p>UX Designer、UI Designer</p>
+        </div>
+        <div class="projectDescription__block">
+          <h2>專案成員</h2>
+          <p>邱威辰</p>
+        </div>
+      </div>
+    </article>
+    <article class="projectContentContainer">
+      <div class="anchorSection"></div>
+      <div class="contentSection">
+        <div class="contentContainer">
+          <h2 class="title title--1">專案背景</h2>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <h3 class="semiTitle">產品簡介</h3>
+              <p>
+                Shopper App 為 SHOPLINE
+                自行開發的手機應用程式，讓商家於後台自行編輯與設計 app
+                介面與內容，並串接店商商品、會員等資料後，提供店家的會員下載。功能涵蓋行銷、會員福利、商品下單、貨物查看…等會員相關功能，亦協助店家架立線上線下的整合銷售。
+              </p>
+              <h3 class="semiTitle">專案簡介與挑戰</h3>
+              <p>
+                SHOPLINE
+                於本季度希望針對一些重點功能做優化，以滿足店家在會員制度與商品推廣上的需求。因
+                SHOPLINE
+                的主要目標族群為中小型店家，在開放較高的自由度讓使用者編輯的同時（例如:按鈕顏色、按鈕文字顏色…等細項），在設計相關功能時亦須考量設計能力較弱的店家，避免因店家的操作而降低了
+                app 的易用性
+              </p>
+              <h4 class="smallTitle quote">
+                本次專案涵蓋多項元件細部調整，此作品集著重於「會員元件」的 UI
+                調整說明。
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--2">問題定義：會員元件</h2>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <p>
+                會員元件為 APP
+                上一個卡片形狀的元件，主要功能為展示會員暱稱、目前等級、會員條碼、消費狀態、到期日期、會員資產（點數、購物金、優惠券）、會員權益。需求文件中所述問題如下圖左側所示：
+              </p>
+            </div>
+            <img
+              src="../asset/img/projectImg/project_SLUI-define.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+            />
+            <div class="pContainer pContainer--top">
+              <h3 class="semiTitle">其他問題</h3>
+              <h4 class="smallTitle">資訊呈現過多</h4>
+              <p>
+                目前舊版元件上有過多不需要的資訊，僅需顯示結帳相關資訊即可，完整會員資訊可放置於個人資訊頁面顯示即可，經過盤點後以下資訊可以於首頁被省略或於視覺上降低比重：
+              </p>
+              <ul>
+                <li>
+                  累計消費額度：該額度可作為刺激消費所用，但與結帳流程無關。
+                </li>
+                <li>消費等級：顧客不需要無時無刻知道自己所屬的等級為何。</li>
+                <li>到期日：為不需要時刻提醒的資訊。</li>
+                <li>
+                  點數與購物金：在消費過程中並不會因為點數的多寡而有太多的影響，普遍的情況為選好商品後再查看可折抵的點數與購物金。
+                </li>
+              </ul>
+            </div>
+            <div class="pContainer">
+              <h4 class="smallTitle">資訊相依性不足</h4>
+              <p>
+                目前會員權益、會員卡片、會員名稱三者之間，在視覺上感覺是三種不同的區塊，導致資訊相依性不足也造成組件過長遮擋版面。因此增加資訊的相依性也是本次的設計目標之一。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--3">設計發散與聚焦</h2>
+          <div class="flexbox flexbox__vertical">
+            <img
+              src="../asset/img/projectImg/project_SLUI-ideate.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+            />
+            <div class="pContainer pContainer--top">
+              <p>
+                根據上述各項問題，我發展出 7
+                種不同的版本與各自不同的資訊狀態，最後選定 v7
+                為最終版本，設計聚焦與最終版本考量點有以下幾點：
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_SLUI-multilanguageProblem.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <div class="pContainer">
+              <h4 class="smallTitle">多語言適配問題</h4>
+              <p>
+                在部分版本中雖然能最有效地將資訊集中於元件中（左圖），但此 app
+                尚需兼容英文等其他語言，如此排版方式會造成文字破版的問題。
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_SLUI-bgProblem.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <div class="pContainer">
+              <h4 class="smallTitle">自定義背景問題</h4>
+              <p>
+                為了符合中小型店家的需求，開放店家自行定義此元件的背景顏色與文字顏色，亦可上傳圖片作為會員卡背景（左圖橘色部分）。因為無法在設計時控制背景主色調，為避免店家調配出對比度過低的效果降低閱讀性，因此不宜有過多的長段文字於卡片上（左圖版本）
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal">
+            <div class="pContainer pContainer--left">
+              <h4 class="smallTitle">最短元件高度</h4>
+              <p>
+                本次 UI
+                的主要目標之一為降低此元件在首頁所佔的版面，因此須盡量降低元件的整體高度已達到此目標，而部分版本因無法有效降低高度而捨去。
+              </p>
+            </div>
+            <div class="pContainer">
+              <h4 class="smallTitle">具有較強的註冊引導</h4>
+              <p>
+                在未登入狀態時的註冊引導與優惠資訊對店家來說十分重要，關乎到是否能收集顧客資訊，因此需挑選較有指示性的設計
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--4">最終解方</h2>
+          <div class="flexbox flexbox__vertical">
+            <img
+              src="../asset/img/projectImg/project_SLUI-finalSolution.webp"
+              alt=""
+              class="flexboxImg flexboxImg__vertical flexboxImg__vertical--middle"
+            />
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_SLUI-memberFix.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <div class="pContainer">
+              <h4 class="smallTitle">簡化會員權益</h4>
+              <p>
+                移除會員權益標題、將原先的 4 項會員權益縮減至 3
+                項，並以「更多權益」的入口作為第 4 項目，避免在 4
+                項權益之外還需另增「更多」按鈕，佔據版面比例。
+              </p>
+            </div>
+          </div>
+
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_SLUI-infoFix.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <div class="pContainer">
+              <h4 class="smallTitle">整合資訊於一個區塊</h4>
+              <p>
+                將原先置於區塊外的會員姓名與條碼移至卡片內，並將會員權益與消費額度等資訊在視覺上囊括至一個區塊內，加強資訊的相依性。
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_SLUI-infoRemove.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <div class="pContainer">
+              <h4 class="smallTitle">移除多餘的資訊</h4>
+              <p>
+                移除累積消費額度資訊，保留可刺激消費的「再消費 XX
+                元即可升級」的提示文字；同時也弱化較不重要的會員標籤，減少會員元件高度。
+              </p>
+            </div>
+          </div>
+          <div class="flexbox flexbox__horizontal flexbox__horizontal--middle">
+            <img
+              src="../asset/img/projectImg/project_SLUI-loginFix.webp"
+              alt=""
+              class="flexboxImg flexboxImg__horizontal flexboxImg__horizontal--left"
+            />
+            <div class="pContainer">
+              <h4 class="smallTitle">未登入狀態設計</h4>
+              <p>宣傳文案以亮色色塊顯示，並用箭頭符號導引至註冊 / 登入按鈕。</p>
+            </div>
+          </div>
+        </div>
+        <div class="contentContainer">
+          <h2 class="title title--5">專案心得</h2>
+          <div class="flexbox flexbox__vertical">
+            <div class="pContainer">
+              <h4 class="smallTitle">
+                除了視覺上的觀感，也要從商業與使用者需求來考量資訊的呈現方式
+              </h4>
+              <p>
+                本次的需求希望可以將這些多樣的會員相關資訊，在重新整理後一併呈現在會員組件上。而在部份的設計發散版本中也保留了幾乎所有的資訊，僅做資訊呈現的對比與排版調整。
+              </p>
+              <p>
+                但考量使用者情境後發現，作為在首頁的元件其實不需要那麼多資訊，甚至只需要會員名稱與條碼按鈕即可；考量商業需求後，此
+                app
+                的首頁還存在店家的商品列表、宣傳消息等資訊，過於詳細的會員資訊會導致遮擋了這些商業訊息；以中小型店家為主要客群時，為避免設計能力較低的店家在開放自由編輯時，製作出閱讀性差的介面，設計元件時就須考量在極端狀況下依然能維持色彩的對比以清楚呈現資訊。
+              </p>
+              <p>
+                因此即便是 UI 元件的樣式調整，除了視覺上的觀感考量，<span
+                  class="highlight"
+                  >也需要從商業與使用者的角度來看那些資訊應該強化或弱化？該保留或移除？才能做出有效的設計。</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
