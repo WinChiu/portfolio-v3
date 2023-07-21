@@ -92,10 +92,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 100vh;
-  max-height: -webkit-fill-available;
   scrollbar-gutter: unset;
-  //cursor: none;
 }
 
 html {
@@ -122,7 +119,7 @@ p {
 .animationCanvas {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   transition-duration: 2s;
 }
 .container {
@@ -135,8 +132,7 @@ p {
   overflow: hidden;
 }
 .titleSection {
-  height: 100vh;
-  max-height: -webkit-fill-available;
+  height: 100dvh;
   width: 100%;
   padding: 24px 40px 24px 40px;
   position: relative;
@@ -547,21 +543,18 @@ p {
   }
 }
 .infoSection {
-  padding: 24px 240px 64px 128px;
+  padding: 24px 240px 24px 128px;
   width: 100%;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100dvh;
   position: relative;
   background-color: transparent;
-  // background-image: url('../asset/img/intro_bg.webp');
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: top;
   @include flex(row, flex-start, center);
 
   .wordGroup {
     @include flex(column, center, flex-end);
     margin-right: 64px;
+    height: fit-content;
     .wordContainer {
       margin-bottom: 24px;
       width: fit-content;
@@ -591,6 +584,7 @@ p {
     }
   }
   .intro {
+    height: fit-content;
     p {
       @include body1();
       margin-bottom: 16px;

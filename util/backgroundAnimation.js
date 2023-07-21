@@ -16,7 +16,7 @@ const colorCycle = (target, i) => {
   const element = document.querySelector(target);
   element.style.transition = `background-color ${colorTransitionDelay}s ease`;
 
-  setInterval(() => {
+  const start = setInterval(() => {
     if (i >= 0 && i <= colors.length - 1) {
       $(`${target}`).css({
         'background-color': colors[i],
@@ -36,6 +36,10 @@ const colorCycle = (target, i) => {
       }, animationDelayTime);
     }
   }, colorChangeInterval);
+
+  window.addEventListener('resize', function () {
+    clearInterval(start);
+  });
 };
 
 const setRow = (row, column) => {
@@ -65,3 +69,21 @@ setBoxes(
   Math.ceil(document.documentElement.clientHeight / 58),
   Math.ceil(document.documentElement.clientWidth / 58)
 );
+
+window.addEventListener('resize', function () {
+  let animateCanvas = document.getElementById('animationContainer');
+  while (animateCanvas.hasChildNodes()) {
+    animateCanvas.firstChild.remove();
+  }
+
+  clearTimeout(window.resizedFinished);
+  window.resizedFinished = setTimeout(function () {
+    console.log('Resized finished.');
+    setTimeout(
+      setBoxes(
+        Math.ceil(document.documentElement.clientHeight / 58),
+        Math.ceil(document.documentElement.clientWidth / 58)
+      )
+    );
+  }, 1800);
+});
