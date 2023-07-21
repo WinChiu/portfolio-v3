@@ -63,7 +63,6 @@ $('.anchor__word').on('click', (e) => {
   const linkScroll = $(`.title--${targetTitle}`).offset().top;
 
   let scrollMarginTop = 48;
-  console.log(parseFloat($('.anchorSection').css('height')));
   if ($(window).width() <= 600) {
     scrollMarginTop = parseFloat($('.anchorSection').css('height')) + 24;
   }

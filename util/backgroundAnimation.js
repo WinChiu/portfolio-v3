@@ -1,9 +1,11 @@
-const colorChangeInterval = 80;
-const animationDelayTime = 1800;
+const colorChangeInterval = 80; //default：80
+const animationDelayTime = 1600; //default：1800
 const colorTransitionDelay = 0.3;
+let color;
 
 const colorCycle = (target, i) => {
   i = 1 - i;
+  let isPending = false;
   const colors = [
     '#e8e8e8',
     '#E4E4E4',
@@ -13,11 +15,12 @@ const colorCycle = (target, i) => {
     '#E4E4E4',
     '#e8e8e8',
   ];
+
   const element = document.querySelector(target);
   element.style.transition = `background-color ${colorTransitionDelay}s ease`;
 
   const start = setInterval(() => {
-    if (i >= 0 && i <= colors.length - 1) {
+    if (i >= 0) {
       $(`${target}`).css({
         'background-color': colors[i],
         transition: `background-color ${colorTransitionDelay}s ease`,
@@ -28,10 +31,13 @@ const colorCycle = (target, i) => {
         }`,
       });
     }
+
     if (i < colors.length - 1) {
       i++;
-    } else {
+    } else if (!isPending) {
+      isPending = true;
       setTimeout(() => {
+        isPending = false;
         i = 0;
       }, animationDelayTime);
     }
@@ -45,12 +51,13 @@ const colorCycle = (target, i) => {
 const setRow = (row, column) => {
   for (let j = 0; j < column; j++) {
     setTimeout(() => {
-      colorCycle(`.box${j + 1 + column * (row - 1)}`, row, column);
+      colorCycle(`.box${j + 1 + column * (row - 1)}`, row);
     }, colorChangeInterval * j);
   }
 };
 
 const setBoxes = (boxRow, boxColumn) => {
+  console.log(boxRow, boxColumn);
   const animationCanvas = document.querySelector('.animationCanvas');
   for (let i = 0; i < boxRow; i++) {
     const boxContainer = document.createElement('div');
@@ -72,18 +79,17 @@ setBoxes(
 
 window.addEventListener('resize', function () {
   let animateCanvas = document.getElementById('animationContainer');
+
+  // Clear All Boxes
   while (animateCanvas.hasChildNodes()) {
     animateCanvas.firstChild.remove();
   }
 
   clearTimeout(window.resizedFinished);
   window.resizedFinished = setTimeout(function () {
-    console.log('Resized finished.');
-    setTimeout(
-      setBoxes(
-        Math.ceil(document.documentElement.clientHeight / 58),
-        Math.ceil(document.documentElement.clientWidth / 58)
-      )
+    setBoxes(
+      Math.ceil(document.documentElement.clientHeight / 58),
+      Math.ceil(document.documentElement.clientWidth / 58)
     );
   }, 1800);
 });
