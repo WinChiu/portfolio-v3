@@ -70,9 +70,7 @@ for (let i = 1; i <= worksCount; i++) {
       );
       $(`.work--${i}`).attr('status', 'open');
       $(`.plusButton--${i}`).css('transform', `rotate(45deg)`);
-      setTimeout(() => {
-        // scroll.update();
-      }, 600);
+      setTimeout(() => {}, 600);
     } else {
       $(`.work--${i}`).css(
         'max-height',
@@ -80,40 +78,9 @@ for (let i = 1; i <= worksCount; i++) {
       );
       $(`.work--${i}`).attr('status', 'closed');
       $(`.plusButton--${i}`).css('transform', `rotate(0deg)`);
-      setTimeout(() => {
-        // scroll.update();
-      }, 600);
+      setTimeout(() => {}, 600);
     }
   });
-
-  // $(`.plusButton--${i}`).on('click', function () {
-  //   let status = $(`.work--${i}`).attr('status');
-  //   if (status === 'closed') {
-  //     $(`.work--${i}`).css(
-  //       'max-height',
-  //       `${
-  //         parseInt($(`.work__header--${i}`).css('height')) +
-  //         parseInt($(`.work__content--${i}`).css('height')) +
-  //         64
-  //       }px`
-  //     );
-  //     $(`.work--${i}`).attr('status', 'open');
-  //     $(`.plusButton--${i}`).css('transform', `rotate(45deg)`);
-  //     setTimeout(() => {
-  //       // scroll.update();
-  //     }, 600);
-  //   } else {
-  //     $(`.work--${i}`).css(
-  //       'max-height',
-  //       `${parseInt($(`.work__header--${i}`).css('height')) + 28}px`
-  //     );
-  //     $(`.work--${i}`).attr('status', 'closed');
-  //     $(`.plusButton--${i}`).css('transform', `rotate(0deg)`);
-  //     setTimeout(() => {
-  //       // scroll.update();
-  //     }, 600);
-  //   }
-  // });
 }
 
 // Close all works
@@ -135,11 +102,9 @@ setTimeout(draw, 300);
 // Word Type
 setTimeout(() => {
   $('.line1').css('width', '100%');
-  // scroll.update();
 }, 3000);
 setTimeout(() => {
   $('.line2').css('width', '100%');
-  // scroll.update();
 }, 3400);
 setTimeout(() => {
   var typed1 = new Typed('#jobTitle', {
@@ -147,7 +112,6 @@ setTimeout(() => {
     typeSpeed: 40,
     startDelay: 0,
   });
-  // scroll.update();
 }, 4200);
 setTimeout(() => {
   var typed2 = new Typed('#introContent', {
@@ -157,7 +121,6 @@ setTimeout(() => {
     typeSpeed: 20,
     startDelay: 0,
   });
-  // scroll.update();
 }, 4400);
 
 // Cursor setting

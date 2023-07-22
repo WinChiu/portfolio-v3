@@ -86,7 +86,6 @@ p {
 }
 .titleSection .animateButtonGroup .animateButton:hover {
   background-color: #e8e8e8;
-  cursor: pointer;
   transition-duration: 0.3s;
 }
 .titleSection .animateButtonGroup .animateButton--active {
@@ -466,7 +465,11 @@ p {
   border: 1px solid #363a35;
   margin-right: 12px;
 }
+.worksSection .worksGroup .work .work__content .content__contentGroup--link a {
+  text-decoration: none;
+}
 .worksSection .worksGroup .work .work__content .content__contentGroup--link:hover {
+  cursor: none;
   background-color: #363a35;
   transition-duration: 0.3s;
   color: white;
@@ -474,9 +477,7 @@ p {
 .worksSection .worksGroup .work .work__content .content__contentGroup--link:hover a {
   transition-duration: 0.3s;
   color: white;
-}
-.worksSection .worksGroup .work .work__content .content__contentGroup--link a {
-  text-decoration: none;
+  cursor: none;
 }
 .worksSection .worksGroup .workSeperationLine {
   height: 1.2px;
@@ -675,10 +676,18 @@ p {
 
 .intro_bg {
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   z-index: -1;
   transition-duration: 0.5s;
   opacity: 0%;
+}
+@media screen and (max-width: 1100px) {
+  .intro_bg {
+    width: auto;
+    height: 100dvh;
+  }
 }
 @media screen and (max-width: 500px) {
   .intro_bg {
@@ -783,6 +792,7 @@ p {
   align-items: flex-start;
   width: -moz-fit-content;
   width: fit-content;
+  height: calc(100dvh - 96px);
   position: sticky;
   top: 48px;
 }
@@ -808,6 +818,29 @@ p {
   width: 0%;
   height: 2px;
   background-color: #363a35;
+}
+#projectSection .projectContentContainer .anchorSection .backBtn {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 1000px;
+  border: 2px #363a35 solid;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+#projectSection .projectContentContainer .anchorSection .backBtn img {
+  transition-duration: 0.3s;
+}
+#projectSection .projectContentContainer .anchorSection .backBtn:hover {
+  background-color: #363a35;
+}
+#projectSection .projectContentContainer .anchorSection .backBtn:hover img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(84deg) brightness(104%) contrast(104%);
 }
 #projectSection .projectContentContainer .contentSection {
   margin-left: 88px;
