@@ -1096,6 +1096,8 @@ p {
     flex-wrap: wrap;
     transform: translateX(-16px);
     box-sizing: border-box;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   #projectSection .projectContentContainer .anchorSection .anchor {
     margin-bottom: 12px;
