@@ -114,7 +114,7 @@ setTimeout(() => {
 setTimeout(() => {
   var typed2 = new Typed('#introContent', {
     strings: [
-      `我是邱威辰，國立台灣大學經濟學系畢業、創意創業學程 13th<br class="tittleContentBr"/>喜歡在生活與學習之中，挑戰各種不同的領域與新事物<br class="tittleContentBr"/>期許自己能為使用者創造良好的產品使用體驗`,
+      `我是邱威辰，國立台灣大學經濟學系畢業、創意創業學程 13th<span class="dot">。</span><br class="tittleContentBr"/>喜歡在生活與學習之中，挑戰各種不同的領域與新事物<span class="dot">。</span><br class="tittleContentBr"/>期許自己能為使用者創造良好的產品使用體驗<span class="dot">。</span>`,
     ],
     typeSpeed: 20,
     startDelay: 0,

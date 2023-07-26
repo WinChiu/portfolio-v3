@@ -198,6 +198,9 @@ p {
       h2 {
         @include h2();
       }
+      .dot {
+        display: none;
+      }
       p {
         @include body1();
         text-align: right;
@@ -214,6 +217,9 @@ p {
         }
         .tittleContentBr {
           display: none;
+        }
+        .dot {
+          display: inline-block;
         }
         p {
           text-align: left;

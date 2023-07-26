@@ -162,6 +162,9 @@ p {
   margin: 0;
   color: #363a35;
 }
+.titleSection .contentGroup .wordGroup .dot {
+  display: none;
+}
 .titleSection .contentGroup .wordGroup p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
@@ -187,6 +190,9 @@ p {
   }
   .titleSection .contentGroup .wordGroup .tittleContentBr {
     display: none;
+  }
+  .titleSection .contentGroup .wordGroup .dot {
+    display: inline-block;
   }
   .titleSection .contentGroup .wordGroup p {
     text-align: left;
