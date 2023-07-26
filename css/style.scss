@@ -19,9 +19,6 @@ $color_swround: #444444;
   line-height: 120%;
   margin: 0;
   color: $color_black;
-  // @media screen and (max-width: 768px) {
-  //   font-size: 30px;
-  // }
 }
 @mixin h3 {
   font-family: 'Noto Sans TC', 'PingFang TC';
@@ -74,10 +71,8 @@ $color_swround: #444444;
 }
 
 * {
-  //border: 1px rgb(54, 107, 223) solid;
   font-family: 'TaipeiSansTCBeta-Regular';
   color: $color_black;
-  //cursor: none;
 }
 body {
   background-color: $color_background;
@@ -106,8 +101,7 @@ p {
 // Fix the bug that some element will disappear when scroll up
 .has-scroll-smooth [data-scroll-container] {
   transform: perspective(1px);
-  // @include flex(column, flex-start, center);
-  // display: block;
+  @include flex(column, flex-start, center);
 }
 .box {
   width: 80px;
@@ -138,12 +132,11 @@ p {
 .titleSection {
   height: 100dvh;
   width: 100%;
-  //max-width: 1600px;
   padding: 24px 40px 24px 40px;
   position: relative;
   box-sizing: border-box;
   margin: 0 auto;
-
+  z-index: 10;
   @include flex(column, space-between, center);
   .animateButtonGroup {
     display: flex;
@@ -162,7 +155,6 @@ p {
     .animateButton {
       &:hover {
         background-color: $color_background;
-        //cursor: pointer;
         transition-duration: 0.3s;
       }
       &--active {
@@ -257,9 +249,11 @@ p {
 .lifeSection {
   position: relative;
   height: 200vh;
-  padding-top: 48px;
+  min-height: 860px;
   max-height: 1600px;
+  padding-top: 48px;
   overflow: hidden;
+  width: 100vw;
   .target {
     position: absolute;
     top: 0;
@@ -379,7 +373,6 @@ p {
 }
 .worksSection {
   width: 100%;
-  // max-width: 1600px;
   margin: 0 auto;
   padding: 128px 40px 128px 40px;
   position: relative;
@@ -557,7 +550,6 @@ p {
 .infoSection {
   padding: 24px 240px 24px 128px;
   width: 100%;
-  //max-width: 1600px;
   margin: 0 auto;
   box-sizing: border-box;
   height: 100dvh;
@@ -591,7 +583,6 @@ p {
         transition-duration: 0.5s;
       }
       &:hover {
-        //cursor: pointer;
         .underline {
           width: 100%;
         }
@@ -670,7 +661,6 @@ p {
 }
 #projectSection {
   width: 100vw;
-  //max-width: 1600px;
   margin: 0 auto;
   height: fit-content;
   padding: 32px 64px;
@@ -703,11 +693,6 @@ p {
         color: white;
         width: 100%;
         background-color: $color_black;
-        // background: linear-gradient(
-        //   180deg,
-        //   rgba(54, 58, 53, 0) 0%,
-        //   $color_black 100%
-        // );
       }
       img {
         position: absolute;
@@ -880,7 +865,6 @@ p {
               margin-top: 12px;
             }
             .quote {
-              //font-weight: normal;
               padding-left: 12px;
               border-left: 4px $color_black solid;
               margin-top: 8px;
