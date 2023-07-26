@@ -737,14 +737,8 @@ p {
   padding: 32px 64px;
   box-sizing: border-box;
 }
-#projectSection .backBtn {
-  position: fixed;
-  bottom: 28px;
-  left: 50%;
-  transform: translate(-50%, 80px);
-  width: 48px;
-  z-index: 5000;
-  transition-duration: 0.3s;
+#projectSection .returnBtn--smScreen {
+  display: none;
 }
 #projectSection .header {
   box-sizing: border-box;
@@ -840,9 +834,17 @@ p {
   align-items: flex-start;
   width: -moz-fit-content;
   width: fit-content;
-  height: calc(100dvh - 96px);
+  height: calc(100dvh - 128px);
   position: sticky;
   top: 48px;
+}
+#projectSection .projectContentContainer .anchorSection .returnBtn--bgScreen {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#projectSection .projectContentContainer .anchorSection .returnBtn--bgScreen img {
+  width: 56px;
 }
 #projectSection .projectContentContainer .anchorSection .anchor {
   margin-bottom: 12px;
@@ -1104,6 +1106,17 @@ p {
     padding: 16px 16px;
     padding-top: 0px;
   }
+  #projectSection .returnBtn--smScreen {
+    position: fixed;
+    display: block;
+    z-index: 1000;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #projectSection .returnBtn--smScreen img {
+    width: 48px;
+  }
   #projectSection .header .coverImg {
     height: 420px;
     width: calc(100% + 32px);
@@ -1177,6 +1190,9 @@ p {
   }
   #projectSection .projectContentContainer .anchorSection .anchor__word:hover {
     color: #363a35;
+  }
+  #projectSection .projectContentContainer .anchorSection .returnBtn--bgScreen {
+    display: none;
   }
   #projectSection .projectContentContainer .contentSection {
     margin: 0;
