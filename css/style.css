@@ -17,6 +17,12 @@ html {
   scroll-behavior: smooth !important;
   height: -moz-fit-content;
   height: fit-content;
+  font-size: 20px;
+}
+@media screen and (max-width: 1680px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 p {
@@ -28,11 +34,17 @@ p {
 }
 
 .box {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   background-color: #e8e8e8;
   margin-right: 2px;
   flex-shrink: 0;
+}
+@media screen and (max-width: 1600px) {
+  .box {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .animationCanvas {
@@ -58,6 +70,7 @@ p {
   padding: 24px 40px 24px 40px;
   position: relative;
   box-sizing: border-box;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -76,6 +89,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 400;
   font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -138,6 +152,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 40px;
+  font-size: 2.5rem;
   line-height: 120%;
   margin: 0;
   color: #363a35;
@@ -146,6 +161,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -191,6 +207,7 @@ p {
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: 600;
     font-size: 24px;
+    font-size: 1.5rem;
     line-height: 150%;
     margin: 0;
     color: #363a35;
@@ -203,6 +220,7 @@ p {
   position: relative;
   height: 200vh;
   padding-top: 48px;
+  max-height: 1600px;
   overflow: hidden;
 }
 .lifeSection .target {
@@ -324,6 +342,7 @@ p {
 
 .worksSection {
   width: 100%;
+  margin: 0 auto;
   padding: 128px 40px 128px 40px;
   position: relative;
   box-sizing: border-box;
@@ -346,6 +365,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 400;
   font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -391,6 +411,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 40px;
+  font-size: 2.5rem;
   line-height: 120%;
   margin: 0;
   color: #363a35;
@@ -400,6 +421,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 20px;
+  font-size: 1.25rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -440,6 +462,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 20px;
+  font-size: 1.25rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -449,6 +472,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -457,6 +481,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -515,15 +540,18 @@ p {
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: 600;
     font-size: 24px;
+    font-size: 1.5rem;
     line-height: 150%;
     margin: 0;
     color: #363a35;
     font-size: 28px;
+    font-size: 1.75rem;
   }
   .worksSection .worksGroup .work .work__header .header__titleGroup--tags {
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: normal;
     font-size: 16px;
+    font-size: 1rem;
     line-height: 150%;
     margin: 0;
     color: #363a35;
@@ -537,6 +565,7 @@ p {
 .infoSection {
   padding: 24px 240px 24px 128px;
   width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
   height: 100dvh;
   position: relative;
@@ -572,10 +601,12 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 48px;
+  font-size: 3rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
   font-size: 64px;
+  font-size: 4rem;
   line-height: 100%;
   margin-bottom: 4px;
 }
@@ -596,6 +627,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -628,6 +660,7 @@ p {
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: 600;
     font-size: 40px;
+    font-size: 2.5rem;
     line-height: 120%;
     margin: 0;
     color: #363a35;
@@ -666,6 +699,7 @@ p {
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: 600;
     font-size: 48px;
+    font-size: 3rem;
     line-height: 150%;
     margin: 0;
     color: #363a35;
@@ -697,10 +731,20 @@ p {
 
 #projectSection {
   width: 100vw;
+  margin: 0 auto;
   height: -moz-fit-content;
   height: fit-content;
   padding: 32px 64px;
   box-sizing: border-box;
+}
+#projectSection .backBtn {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translate(-50%, 80px);
+  width: 48px;
+  z-index: 5000;
+  transition-duration: 0.3s;
 }
 #projectSection .header {
   box-sizing: border-box;
@@ -725,6 +769,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 48px;
+  font-size: 3rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -761,10 +806,12 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 40px;
+  font-size: 2.5rem;
   line-height: 120%;
   margin: 0;
   color: #363a35;
   font-size: 32px;
+  font-size: 2rem;
   margin-right: 24px;
   flex-shrink: 0;
 }
@@ -772,6 +819,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -803,6 +851,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -853,10 +902,12 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 40px;
+  font-size: 2.5rem;
   line-height: 120%;
   margin: 0;
   color: #363a35;
   font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 24px;
   padding-bottom: 12px;
   border-bottom: 1px #363a35 solid;
@@ -893,6 +944,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: normal;
   font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -919,6 +971,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 400;
   font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -940,6 +993,7 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 24px;
+  font-size: 1.5rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
@@ -950,10 +1004,12 @@ p {
   font-family: "Noto Sans TC", "PingFang TC";
   font-weight: 600;
   font-size: 20px;
+  font-size: 1.25rem;
   line-height: 150%;
   margin: 0;
   color: #363a35;
   font-size: 18.75px;
+  font-size: 1.171875rem;
   margin-bottom: 8px;
   margin-top: 12px;
 }
@@ -963,6 +1019,7 @@ p {
   margin-top: 8px;
   margin-bottom: 24px;
   font-size: 18px;
+  font-size: 1.125rem;
 }
 #projectSection .projectContentContainer .contentSection .contentContainer .flexbox .pContainer--left {
   margin-right: 48px;
@@ -1045,19 +1102,24 @@ p {
 @media screen and (max-width: 600px) {
   #projectSection {
     padding: 16px 16px;
+    padding-top: 0px;
   }
   #projectSection .header .coverImg {
-    height: 320px;
+    height: 420px;
+    width: calc(100% + 32px);
+    transform: translateX(-16px);
   }
   #projectSection .header .coverImg h1 {
     padding: 12px 16px 16px 16px;
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: 600;
     font-size: 40px;
+    font-size: 2.5rem;
     line-height: 120%;
     margin: 0;
     color: #363a35;
     font-size: 32px;
+    font-size: 2rem;
     color: white;
   }
   #projectSection .header .coverImg img {
@@ -1069,6 +1131,7 @@ p {
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: 600;
     font-size: 24px;
+    font-size: 1.5rem;
     line-height: 150%;
     margin: 0;
     color: #363a35;
@@ -1107,6 +1170,7 @@ p {
     font-family: "Noto Sans TC", "PingFang TC";
     font-weight: normal;
     font-size: 16px;
+    font-size: 1rem;
     line-height: 150%;
     margin: 0;
     color: #363a35;
@@ -1119,6 +1183,7 @@ p {
   }
   #projectSection .projectContentContainer .contentSection .contentContainer .title {
     font-size: 32px;
+    font-size: 2rem;
     margin-bottom: 24px;
   }
   #projectSection .projectContentContainer .contentSection .contentContainer .flexbox .flexboxImg__vertical--middle {
@@ -1129,9 +1194,11 @@ p {
   }
   #projectSection .projectContentContainer .contentSection .contentContainer .flexbox .pContainer .semiTitle {
     font-size: 22px;
+    font-size: 1.375rem;
   }
   #projectSection .projectContentContainer .contentSection .contentContainer .flexbox .pContainer .smallTitle {
     font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 

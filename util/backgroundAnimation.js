@@ -1,6 +1,7 @@
 const colorChangeInterval = 80;
 const animationDelayTime = 4000;
 const colorTransitionDelay = 0.3;
+const boxSize = 82;
 
 let intervalList = [];
 
@@ -52,8 +53,14 @@ const colorCycle = (target, i) => {
     clearTimeout(window.resizedFinished);
     window.resizedFinished = setTimeout(function () {
       setBoxes(
-        Math.ceil(document.documentElement.clientHeight / 58),
-        Math.ceil(document.documentElement.clientWidth / 58)
+        Math.ceil(
+          document.documentElement.clientHeight /
+            (document.documentElement.clientWidth > 1600 ? boxSize : 66)
+        ),
+        Math.ceil(
+          document.documentElement.clientWidth /
+            (document.documentElement.clientWidth > 1600 ? boxSize : 66)
+        )
       );
     }, 500);
   });
@@ -61,8 +68,14 @@ const colorCycle = (target, i) => {
   document.onvisibilitychange = function () {
     if (document.visibilityState == 'visible') {
       setBoxes(
-        Math.ceil(document.documentElement.clientHeight / 58),
-        Math.ceil(document.documentElement.clientWidth / 58)
+        Math.ceil(
+          document.documentElement.clientHeight /
+            (document.documentElement.clientWidth > 1600 ? boxSize : 66)
+        ),
+        Math.ceil(
+          document.documentElement.clientWidth /
+            (document.documentElement.clientWidth > 1600 ? boxSize : 66)
+        )
       );
     } else {
       clearInterval(start);
@@ -123,6 +136,12 @@ const clearAllInterval = () => {
 };
 
 setBoxes(
-  Math.ceil(document.documentElement.clientHeight / 58),
-  Math.ceil(document.documentElement.clientWidth / 58)
+  Math.ceil(
+    document.documentElement.clientHeight /
+      (document.documentElement.clientWidth > 1600 ? boxSize : 66)
+  ),
+  Math.ceil(
+    document.documentElement.clientWidth /
+      (document.documentElement.clientWidth > 1600 ? boxSize : 66)
+  )
 );

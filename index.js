@@ -70,7 +70,6 @@ for (let i = 1; i <= worksCount; i++) {
       );
       $(`.work--${i}`).attr('status', 'open');
       $(`.plusButton--${i}`).css('transform', `rotate(45deg)`);
-      setTimeout(() => {}, 600);
     } else {
       $(`.work--${i}`).css(
         'max-height',
@@ -78,7 +77,6 @@ for (let i = 1; i <= worksCount; i++) {
       );
       $(`.work--${i}`).attr('status', 'closed');
       $(`.plusButton--${i}`).css('transform', `rotate(0deg)`);
-      setTimeout(() => {}, 600);
     }
   });
 }
