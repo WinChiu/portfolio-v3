@@ -568,6 +568,7 @@ p {
       @include flex(column, center, flex-start);
       a {
         text-decoration: none;
+        cursor: none;
       }
       h1 {
         @include h1();

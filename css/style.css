@@ -603,6 +603,7 @@ p {
 }
 .infoSection .wordGroup .wordContainer a {
   text-decoration: none;
+  cursor: none;
 }
 .infoSection .wordGroup .wordContainer h1 {
   font-family: "Noto Sans TC", "PingFang TC";
